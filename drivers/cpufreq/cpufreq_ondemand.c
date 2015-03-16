@@ -702,6 +702,7 @@ static ssize_t store_powersave_bias(struct kobject *a, struct attribute *b,
 					mutex_unlock(&dbs_info->timer_mutex);
 					atomic_set(&dbs_info->sync_enabled, 1);
 				}
+					mutex_unlock(&dbs_info->timer_mutex);
 skip_this_cpu:
 				unlock_policy_rwsem_write(cpu);
 			}
