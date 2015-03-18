@@ -421,8 +421,6 @@ __v7_ca15mp_proc_info:
 __krait_proc_info:
 	.long	0x510f0400		@ Required ID value
 	.long	0xff0ffc00		@ Mask for ID
-	__v7_proc __v7_setup, hwcaps = HWCAP_IDIV
-	.size	__krait_proc_info, . - __krait_proc_info
 
 	/*
 	 * Match any ARMv7 processor core.
