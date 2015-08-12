@@ -635,6 +635,7 @@ u32 res_trk_set_perf_level(u32 req_perf_lvl, u32 *pn_set_perf_lvl,
 	VCDRES_MSG_MED("VIDC: vidc_freq = %u, req_perf_lvl = %u\n",
 		vidc_freq, req_perf_lvl);
 
+
 #ifdef USE_RES_TRACKER
     if (req_perf_lvl != RESTRK_1080P_MIN_PERF_LEVEL) {
 		VCDRES_MSG_MED("%s(): Setting vidc freq to %u\n",
