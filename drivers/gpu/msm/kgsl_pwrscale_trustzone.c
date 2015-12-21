@@ -188,6 +188,7 @@ static void tz_idle(struct kgsl_device *device, struct kgsl_pwrscale *pwrscale)
 	if (val) {
 		kgsl_pwrctrl_pwrlevel_change(device,
 					     pwr->active_pwrlevel + val);
+	}
 }
 
 static void tz_busy(struct kgsl_device *device,
