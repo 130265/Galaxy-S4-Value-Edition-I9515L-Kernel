@@ -182,9 +182,6 @@ static void tz_idle(struct kgsl_device *device, struct kgsl_pwrscale *pwrscale)
 	} else if (priv->idle_dcvs) {
 		idle = priv->bin.total_time - priv->bin.busy_time;
 		idle = (idle > 0) ? idle : 0;
-<<<<<<< HEAD
-		val = __secure_tz_entry(TZ_UPDATE_ID, idle, device->id);
-=======
 #ifdef CONFIG_MSM_KGSL_SIMPLE_GOV
 	if (priv->governor == TZ_GOVERNOR_SIMPLE)
 		val = simple_governor(device, idle);
@@ -203,9 +200,6 @@ static void tz_idle(struct kgsl_device *device, struct kgsl_pwrscale *pwrscale)
 				pwr->active_pwrlevel,
 				priv->bin.total_time, priv->bin.busy_time);
 
-		kgsl_trace_kgsl_tz_params(device, priv->bin.total_time, priv->bin.busy_time,
-				idle, val);
->>>>>>> 026e5b5...  msm: kgsl: support busy stats based policy in tz
 	}
 	priv->bin.total_time = 0;
 	priv->bin.busy_time = 0;
